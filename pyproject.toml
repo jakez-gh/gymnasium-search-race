@@ -32,33 +32,22 @@ dependencies = [
 [project.optional-dependencies]
 training = ["moviepy==2.2.1", "rl_zoo3==2.7.0", "tensorboard==2.20.0"]
 testing = ["pytest"]
-quality = ["black[d]", "isort", "pylint"]
+quality = ["ruff"]
 
 [project.urls]
 Repository = "https://github.com/Quentin18/gymnasium-search-race"
 
-[tool.black]
-line-length = 88
+[tool.ruff]
+target-version = "py310"
 
-[tool.isort]
-profile = "black"
+[tool.ruff.lint]
+select = [
+    "I", # isort
+    "PL", # pylint
+]
 
-[tool.pep8]
-max-line-length = "88"
-
-[tool.pylint."MESSAGES CONTROL"]
-max-line-length = 88
-disable = [
-    "attribute-defined-outside-init",
-    "duplicate-code",
-    "inconsistent-return-statements",
-    "missing-class-docstring",
-    "missing-function-docstring",
-    "missing-module-docstring",
-    "no-member",
-    "too-many-arguments",
-    "too-many-instance-attributes",
-    "too-many-positional-arguments",
+ignore = [
+    "PLR0913",
 ]
 
 [tool.pytest.ini_options]

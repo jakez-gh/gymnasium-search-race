@@ -90,7 +90,7 @@ def merge_best_actions(
 
     print("Merging best actions")
 
-    for test_id in actions_1:
+    for test_id in actions_1:  # noqa: PLC0206
         length_1 = len(actions_1[test_id])
         length_2 = len(actions_2[test_id])
         print(f"Test {test_id}: {length_1} - {length_2}")

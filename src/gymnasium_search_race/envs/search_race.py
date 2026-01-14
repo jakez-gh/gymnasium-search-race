@@ -264,9 +264,9 @@ class SearchRaceEnv(gym.Env):
         self,
         action: ActType,
     ) -> tuple[ObsType, SupportsFloat, bool, bool, dict[str, Any]]:
-        assert self.action_space.contains(
-            action
-        ), f"{action!r} ({type(action)}) invalid"
+        assert self.action_space.contains(action), (
+            f"{action!r} ({type(action)}) invalid"
+        )
 
         angle, thrust = self._convert_action_to_angle_thrust(action=action)
 

@@ -5,6 +5,8 @@ import gymnasium as gym
 import numpy as np
 from gymnasium.core import ActType, ObsType
 
+CP_DISTANCE_THRESHOLD = 3000
+
 
 def get_next_action(observation: ObsType, info: dict[str, Any]) -> ActType:
     car_angle = info["angle"]
@@ -19,7 +21,7 @@ def get_next_action(observation: ObsType, info: dict[str, Any]) -> ActType:
         info["max_rotation_per_turn"],
     )
 
-    thrust = 50 if np.linalg.norm(next_cp_diff) < 3000 else 100
+    thrust = 50 if np.linalg.norm(next_cp_diff) < CP_DISTANCE_THRESHOLD else 100
 
     return np.array([angle, thrust]) / [
         info["max_rotation_per_turn"],

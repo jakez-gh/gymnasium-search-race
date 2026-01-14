@@ -5,8 +5,7 @@
 [![PyPI](https://badge.fury.io/py/gymnasium-search-race.svg)](https://badge.fury.io/py/gymnasium-search-race)
 [![PyPI Downloads](https://static.pepy.tech/badge/gymnasium-search-race)](https://pepy.tech/projects/gymnasium-search-race)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 Gymnasium environments for
 the [Search Race CodinGame optimization puzzle](https://www.codingame.com/multiplayer/optimization/search-race)
